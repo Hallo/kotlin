@@ -29,14 +29,22 @@ import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiNamedElement;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+<<<<<<< HEAD
 import org.jetbrains.jet.analyzer.AnalyzeExhaust;
 import org.jetbrains.jet.plugin.codeInsight.TipsManager;
 import org.jetbrains.jet.di.InjectorForMacros;
+=======
+import org.jetbrains.jet.compiler.TipsManager;
+import org.jetbrains.jet.di.Injector;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.DeclarationDescriptor;
 import org.jetbrains.jet.lang.descriptors.VariableDescriptor;
 import org.jetbrains.jet.lang.psi.*;
 import org.jetbrains.jet.lang.resolve.BindingContext;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.resolve.BindingContextUtils;
+=======
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.resolve.scopes.JetScope;
 import org.jetbrains.jet.lang.types.expressions.ExpressionTypingServices;
 import org.jetbrains.jet.plugin.project.WholeProjectAnalyzerFacade;
@@ -67,7 +75,11 @@ public abstract class BaseJetVariableMacro extends Macro {
             return null;
         }
 
+<<<<<<< HEAD
         ExpressionTypingServices callResolverContext = new InjectorForMacros(project, analyzeExhaust.getModuleConfiguration()).getExpressionTypingServices();
+=======
+        ExpressionTypingServices callResolverContext = new Injector(project, null, null, null, false).getExpressionTypingServices();
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 
         List<VariableDescriptor> filteredDescriptors = new ArrayList<VariableDescriptor>();
         for (DeclarationDescriptor declarationDescriptor : scope.getAllDescriptors()) {

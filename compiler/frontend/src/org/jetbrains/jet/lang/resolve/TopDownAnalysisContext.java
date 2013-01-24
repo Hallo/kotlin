@@ -19,9 +19,21 @@ package org.jetbrains.jet.lang.resolve;
 import com.google.common.base.Function;
 import com.google.common.base.Functions;
 import com.google.common.collect.Maps;
+<<<<<<< HEAD
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
+=======
+import com.google.common.collect.Sets;
+import com.intellij.openapi.project.Project;
+import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiFile;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import org.jetbrains.jet.di.Injector;
+import org.jetbrains.jet.lang.ModuleConfiguration;
+import org.jetbrains.jet.lang.cfg.pseudocode.JetControlFlowDataTraceFactory;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.*;
 import org.jetbrains.jet.lang.resolve.scopes.JetScope;
@@ -58,6 +70,10 @@ public class TopDownAnalysisContext implements BodiesResolveContext {
 
     private StringBuilder debugOutput;
 
+<<<<<<< HEAD
+=======
+        this.injector = new Injector(project, this, configuration, jetControlFlowDataTraceFactory, analyzingBootstrapLibrary);
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 
     private TopDownAnalysisParameters topDownAnalysisParameters;
 

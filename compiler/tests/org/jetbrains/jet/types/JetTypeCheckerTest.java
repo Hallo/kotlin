@@ -24,6 +24,7 @@ import org.jetbrains.jet.ConfigurationKind;
 import org.jetbrains.jet.JetLiteFixture;
 import org.jetbrains.jet.JetTestCaseBuilder;
 import org.jetbrains.jet.JetTestUtils;
+<<<<<<< HEAD
 import org.jetbrains.jet.cli.jvm.compiler.JetCoreEnvironment;
 import org.jetbrains.jet.di.InjectorForJavaSemanticServices;
 import org.jetbrains.jet.di.InjectorForTests;
@@ -37,6 +38,14 @@ import org.jetbrains.jet.lang.resolve.DescriptorResolver;
 import org.jetbrains.jet.lang.resolve.TypeResolver;
 import org.jetbrains.jet.lang.resolve.calls.autocasts.DataFlowInfo;
 import org.jetbrains.jet.lang.resolve.java.DescriptorSearchRule;
+=======
+import org.jetbrains.jet.di.Injector;
+import org.jetbrains.jet.lang.descriptors.*;
+import org.jetbrains.jet.lang.descriptors.annotations.AnnotationDescriptor;
+import org.jetbrains.jet.lang.psi.*;
+import org.jetbrains.jet.lang.resolve.*;
+import org.jetbrains.jet.lang.resolve.java.JavaBridgeConfiguration;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.resolve.java.JavaDescriptorResolver;
 import org.jetbrains.jet.lang.resolve.lazy.LazyResolveTestUtil;
 import org.jetbrains.jet.lang.resolve.name.FqName;
@@ -77,9 +86,13 @@ public class JetTypeCheckerTest extends JetLiteFixture {
     public void setUp() throws Exception {
         super.setUp();
 
+<<<<<<< HEAD
         builtIns = KotlinBuiltIns.getInstance();
 
         InjectorForTests injector = new InjectorForTests(getProject());
+=======
+        Injector injector = new Injector(getProject(), null, null, null, false);
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
         descriptorResolver = injector.getDescriptorResolver();
         typeResolver = injector.getTypeResolver();
         expressionTypingServices = injector.getExpressionTypingServices();

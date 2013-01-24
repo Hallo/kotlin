@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright 2010-2012 JetBrains s.r.o.
+=======
+ * Copyright 2000-2012 JetBrains s.r.o.
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +20,7 @@
 
 package org.jetbrains.jet.di;
 
+<<<<<<< HEAD
 class Parameter {
     private final DiType type;
     private final String name;
@@ -30,6 +35,23 @@ class Parameter {
     }
 
     public DiType getType() {
+=======
+/**
+* @author abreslav
+*/
+class Parameter {
+    private final Class<?> type;
+    private final String name;
+    private final Field field;
+
+    Parameter(Class<?> type, String name, Field field) {
+        this.type = type;
+        this.name = name;
+        this.field = field;
+    }
+
+    public Class<?> getType() {
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
         return type;
     }
 
@@ -41,10 +63,13 @@ class Parameter {
         return field;
     }
 
+<<<<<<< HEAD
     public boolean isRequired() {
         return required;
     }
 
+=======
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

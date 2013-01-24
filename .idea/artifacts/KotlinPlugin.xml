@@ -22,6 +22,7 @@
           <element id="archive" name="kotlin-js-libraries.zip">
             <element id="dir-copy" path="$PROJECT_DIR$/js/js.libraries/src" />
           </element>
+<<<<<<< HEAD
           <element id="library" level="project" name="javax.inject" />
           <element id="directory" name="jps">
             <element id="archive" name="kotlin-jps-plugin.jar">
@@ -34,6 +35,8 @@
               <element id="module-output" name="util" />
             </element>
           </element>
+=======
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
         </element>
         <element id="directory" name="kotlinc">
           <element id="dir-copy" path="$PROJECT_DIR$/dist/kotlinc" />

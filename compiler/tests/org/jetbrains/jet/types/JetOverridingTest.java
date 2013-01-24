@@ -16,20 +16,31 @@
 
 package org.jetbrains.jet.types;
 
+<<<<<<< HEAD
 import org.jetbrains.jet.ConfigurationKind;
 import org.jetbrains.jet.JetLiteFixture;
 import org.jetbrains.jet.JetTestCaseBuilder;
 import org.jetbrains.jet.JetTestUtils;
 import org.jetbrains.jet.cli.jvm.compiler.JetCoreEnvironment;
 import org.jetbrains.jet.di.InjectorForTests;
+=======
+import org.jetbrains.jet.JetLiteFixture;
+import org.jetbrains.jet.JetTestCaseBuilder;
+import org.jetbrains.jet.JetTestUtils;
+import org.jetbrains.jet.di.Injector;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.FunctionDescriptor;
 import org.jetbrains.jet.lang.descriptors.ModuleDescriptor;
 import org.jetbrains.jet.lang.psi.JetNamedFunction;
 import org.jetbrains.jet.lang.psi.JetPsiFactory;
 import org.jetbrains.jet.lang.resolve.DescriptorResolver;
 import org.jetbrains.jet.lang.resolve.OverridingUtil;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.resolve.name.Name;
 import org.jetbrains.jet.lang.types.lang.KotlinBuiltIns;
+=======
+import org.jetbrains.jet.lang.types.lang.JetStandardLibrary;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 
 public class JetOverridingTest extends JetLiteFixture {
 
@@ -45,6 +56,7 @@ public class JetOverridingTest extends JetLiteFixture {
     @Override
     public void setUp() throws Exception {
         super.setUp();
+<<<<<<< HEAD
         InjectorForTests injector = new InjectorForTests(getProject());
         builtIns = injector.getKotlinBuiltIns();
         descriptorResolver = injector.getDescriptorResolver();
@@ -55,6 +67,11 @@ public class JetOverridingTest extends JetLiteFixture {
         builtIns = null;
         descriptorResolver = null;
         super.tearDown();
+=======
+        Injector injector = new Injector(getProject(), null, null, null, false);
+        library = injector.getJetStandardLibrary();
+        descriptorResolver = injector.getDescriptorResolver();
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     }
 
     @Override

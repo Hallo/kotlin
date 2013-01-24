@@ -16,12 +16,17 @@
 
 package org.jetbrains.jet.lang.resolve;
 
+<<<<<<< HEAD
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+=======
+import org.jetbrains.annotations.NotNull;
+import javax.inject.Inject;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.JetClassOrObject;
 import org.jetbrains.jet.lang.psi.JetDelegationSpecifier;

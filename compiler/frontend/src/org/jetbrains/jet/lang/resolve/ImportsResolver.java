@@ -19,7 +19,12 @@ package org.jetbrains.jet.lang.resolve;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.jetbrains.annotations.NotNull;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.PlatformToKotlinClassMap;
+=======
+import org.jetbrains.annotations.Nullable;
+import javax.inject.Inject;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.ModuleConfiguration;
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.*;

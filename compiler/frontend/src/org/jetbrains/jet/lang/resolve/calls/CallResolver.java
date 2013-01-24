@@ -18,9 +18,14 @@ package org.jetbrains.jet.lang.resolve.calls;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+<<<<<<< HEAD
 import com.intellij.openapi.progress.ProgressIndicatorProvider;
+=======
+import com.intellij.lang.ASTNode;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
+import javax.inject.Inject;
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.*;
 import org.jetbrains.jet.lang.resolve.*;

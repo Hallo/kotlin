@@ -25,14 +25,19 @@ import com.intellij.psi.PsiMethod;
 import junit.framework.Test;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.jet.JetTestCaseBuilder;
+<<<<<<< HEAD
 import org.jetbrains.jet.di.InjectorForJavaSemanticServices;
 import org.jetbrains.jet.di.InjectorForTests;
+=======
+import org.jetbrains.jet.di.Injector;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.ClassDescriptor;
 import org.jetbrains.jet.lang.descriptors.DeclarationDescriptor;
 import org.jetbrains.jet.lang.descriptors.FunctionDescriptor;
 import org.jetbrains.jet.lang.descriptors.ValueParameterDescriptor;
 import org.jetbrains.jet.lang.psi.JetFile;
 import org.jetbrains.jet.lang.resolve.BindingTraceContext;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.resolve.calls.autocasts.DataFlowInfo;
 import org.jetbrains.jet.lang.resolve.calls.model.ResolvedCall;
 import org.jetbrains.jet.lang.resolve.calls.results.OverloadResolutionResults;
@@ -40,6 +45,14 @@ import org.jetbrains.jet.lang.resolve.java.PsiClassFinder;
 import org.jetbrains.jet.lang.resolve.name.FqName;
 import org.jetbrains.jet.lang.resolve.name.Name;
 import org.jetbrains.jet.lang.resolve.scopes.receivers.ReceiverValue;
+=======
+import org.jetbrains.jet.lang.resolve.calls.CallResolver;
+import org.jetbrains.jet.lang.resolve.calls.OverloadResolutionResults;
+import org.jetbrains.jet.lang.resolve.calls.ResolvedCall;
+import org.jetbrains.jet.lang.resolve.java.JavaSemanticServices;
+import org.jetbrains.jet.lang.resolve.scopes.receivers.ReceiverDescriptor;
+import org.jetbrains.jet.lang.types.lang.JetStandardLibrary;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.types.JetType;
 import org.jetbrains.jet.lang.types.TypeUtils;
 import org.jetbrains.jet.lang.types.expressions.ExpressionTypingContext;
@@ -134,12 +147,16 @@ public class JetResolveTest extends ExtensibleResolveTestCase {
 
         ExpressionTypingServices expressionTypingServices = new InjectorForTests(getProject()).getExpressionTypingServices();
 
+<<<<<<< HEAD
         ExpressionTypingContext context = ExpressionTypingContext.newContext(
                 expressionTypingServices, new BindingTraceContext(), classDescriptor.getDefaultType().getMemberScope(),
                 DataFlowInfo.EMPTY, TypeUtils.NO_EXPECTED_TYPE, false);
 
         OverloadResolutionResults<FunctionDescriptor> functions = resolveFakeCall(
                 context, ReceiverValue.NO_RECEIVER, Name.identifier(name), parameterTypes);
+=======
+        CallResolver callResolver = new Injector(getProject(), null, null, null, false).getCallResolver();
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 
         for (ResolvedCall<? extends FunctionDescriptor> resolvedCall : functions.getResultingCalls()) {
             List<ValueParameterDescriptor> unsubstitutedValueParameters = resolvedCall.getResultingDescriptor().getValueParameters();

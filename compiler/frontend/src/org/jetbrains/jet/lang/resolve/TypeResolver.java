@@ -19,7 +19,11 @@ package org.jetbrains.jet.lang.resolve;
 import com.intellij.psi.util.PsiTreeUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.ModuleConfiguration;
+=======
+import javax.inject.Inject;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.ClassDescriptor;
 import org.jetbrains.jet.lang.descriptors.ClassifierDescriptor;
 import org.jetbrains.jet.lang.descriptors.DeclarationDescriptor;
@@ -29,17 +33,24 @@ import org.jetbrains.jet.lang.psi.*;
 import org.jetbrains.jet.lang.resolve.scopes.JetScope;
 import org.jetbrains.jet.lang.resolve.scopes.LazyScopeAdapter;
 import org.jetbrains.jet.lang.types.*;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.types.lang.KotlinBuiltIns;
+=======
+import org.jetbrains.jet.lang.types.lang.JetStandardClasses;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.util.lazy.LazyValue;
 
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 import static org.jetbrains.jet.lang.diagnostics.Errors.*;
+<<<<<<< HEAD
 import static org.jetbrains.jet.lang.types.Variance.*;
+=======
+import static org.jetbrains.jet.lang.resolve.BindingContext.REFERENCE_TARGET;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 
 public class TypeResolver {
 
@@ -47,6 +58,8 @@ public class TypeResolver {
     private DescriptorResolver descriptorResolver;
     private QualifiedExpressionResolver qualifiedExpressionResolver;
     private ModuleConfiguration moduleConfiguration;
+
+    public TypeResolver() {}
 
     @Inject
     public void setDescriptorResolver(DescriptorResolver descriptorResolver) {

@@ -21,7 +21,11 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
+<<<<<<< HEAD
 import org.jetbrains.jet.di.InjectorForTopDownAnalyzerBasic;
+=======
+import javax.inject.Inject;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.ModuleConfiguration;
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.JetClassOrObject;
@@ -95,10 +99,25 @@ public class TopDownAnalyzer {
         this.context = context;
     }
 
+<<<<<<< HEAD
     @Inject
     public void setModuleDescriptor(@NotNull ModuleDescriptor moduleDescriptor) {
         this.moduleDescriptor = moduleDescriptor;
     }
+=======
+    private static void process(
+            @NotNull Project project,
+            @NotNull BindingTrace trace,
+            @NotNull JetScope outerScope,
+            @NotNull NamespaceLike owner,
+            @NotNull Collection<? extends PsiElement> declarations,
+            @NotNull Predicate<PsiFile> analyzeCompletely,
+            @NotNull JetControlFlowDataTraceFactory flowDataTraceFactory,
+            @NotNull ModuleConfiguration configuration,
+            boolean declaredLocally) {
+        TopDownAnalysisContext context = new TopDownAnalysisContext(project, trace, analyzeCompletely, configuration, declaredLocally, false, flowDataTraceFactory);
+        context.getInjector().getTopDownAnalyzer().doProcess(context, outerScope, owner, declarations);
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 
     @Inject
     public void setNamespaceFactory(@NotNull NamespaceFactoryImpl namespaceFactory) {
@@ -127,8 +146,15 @@ public class TopDownAnalyzer {
 
         overloadResolver.process();
 
+<<<<<<< HEAD
         if (!topDownAnalysisParameters.isAnalyzingBootstrapLibrary()) {
             bodyResolver.resolveBodies();
+=======
+        if (!context.analyzingBootstrapLibrary()) {
+            context.getInjector().getBodyResolver().resolveBehaviorDeclarationBodies();
+            context.getInjector().getControlFlowAnalyzer().process();
+            context.getInjector().getDeclarationsChecker().process();
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
         }
 
         context.debug("Exit");
@@ -155,6 +181,7 @@ public class TopDownAnalyzer {
             @NotNull WritableScope outerScope,
             @NotNull NamespaceDescriptorImpl standardLibraryNamespace,
             @NotNull List<JetFile> files) {
+<<<<<<< HEAD
 
         TopDownAnalysisParameters topDownAnalysisParameters = new TopDownAnalysisParameters(
                 Predicates.<PsiFile>alwaysFalse(), true, false, Collections.<AnalyzerScriptParameter>emptyList());
@@ -167,6 +194,9 @@ public class TopDownAnalyzer {
 
     private void doProcessStandardLibraryNamespace(
             WritableScope outerScope, NamespaceDescriptorImpl standardLibraryNamespace, List<JetFile> files) {
+=======
+        TopDownAnalysisContext context = new TopDownAnalysisContext(project, trace, Predicates.<PsiFile>alwaysFalse(), ModuleConfiguration.EMPTY, false, true, null);
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
         ArrayList<JetDeclaration> toAnalyze = new ArrayList<JetDeclaration>();
         for(JetFile file : files) {
             context.getNamespaceDescriptors().put(file, standardLibraryNamespace);
@@ -175,7 +205,11 @@ public class TopDownAnalyzer {
         }
 //        context.getDeclaringScopes().put(file, outerScope);
 
+<<<<<<< HEAD
         doProcess(outerScope, standardLibraryNamespace.getBuilder(), toAnalyze);
+=======
+        context.getInjector().getTopDownAnalyzer().doProcess(context, outerScope, standardLibraryNamespace, toAnalyze);
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     }
 
     public static void processClassOrObject(

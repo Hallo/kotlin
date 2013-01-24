@@ -16,6 +16,7 @@
 
 package org.jetbrains.jet.lang.resolve;
 
+<<<<<<< HEAD
 import com.google.common.base.Predicate;
 import com.google.common.collect.*;
 import com.intellij.lang.ASTNode;
@@ -25,6 +26,17 @@ import com.intellij.util.containers.LinkedMultiMap;
 import com.intellij.util.containers.MultiMap;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+=======
+import com.google.common.collect.Lists;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Sets;
+import com.intellij.lang.ASTNode;
+import com.intellij.psi.PsiElement;
+import com.intellij.util.containers.LinkedMultiMap;
+import com.intellij.util.containers.MultiMap;
+import org.jetbrains.annotations.NotNull;
+import javax.inject.Inject;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.descriptors.annotations.AnnotationDescriptor;
 import org.jetbrains.jet.lang.diagnostics.Errors;

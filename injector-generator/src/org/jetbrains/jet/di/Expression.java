@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright 2010-2012 JetBrains s.r.o.
+=======
+ * Copyright 2000-2012 JetBrains s.r.o.
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +20,7 @@
 
 package org.jetbrains.jet.di;
 
+<<<<<<< HEAD
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -31,3 +36,9 @@ interface Expression {
     @Nullable
     DiType getType();
 }
+=======
+/**
+* @author abreslav
+*/
+interface Expression {}
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e

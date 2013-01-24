@@ -157,6 +157,7 @@
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/platform/lang-api/src" />
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/platform/lang-api/testSources" />
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/platform/funcTests/project1/module1/src" />
+<<<<<<< HEAD
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/platform/indexing-impl/src" />
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/platform/indexing-api/src" />
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/platform/projectModel-api/src" />
@@ -191,6 +192,29 @@
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/tools/lexer/jflex-1.4/examples/simple" />
       <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/tools/lexer/jflex-1.4/examples/java" />
       <root url="jar://$PROJECT_DIR$/dependencies/guava-12.0-sources.jar!/" />
+=======
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/jsp-openapi/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/jsp-spi/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/jsp-base-openapi/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/testFramework/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/java-runtime/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/java-impl/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/java-tests/testSrc" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/execution/impl/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/execution/openapi/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/java-psi-api/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/java-psi-impl/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/debugger/impl/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/debugger/openapi/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/compiler/forms-compiler/testSrc" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/compiler/forms-compiler/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/compiler/impl/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/compiler/javac2/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/compiler/notNull/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/compiler/openapi/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/idea-ui/src" />
+      <root url="jar://$PROJECT_DIR$/ideaSDK/sources/sources.zip!/java/openapi/src" />
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/ideaSDK/core" recursive="false" />
   </library>

@@ -19,12 +19,20 @@ package org.jetbrains.jet.lang.resolve;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
+<<<<<<< HEAD
 import com.intellij.lang.ASTNode;
+=======
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiNameIdentifierOwner;
 import com.intellij.util.containers.ContainerUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+<<<<<<< HEAD
+=======
+import javax.inject.Inject;
+import org.jetbrains.jet.lang.ModuleConfiguration;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.*;
 import org.jetbrains.jet.lang.resolve.name.Name;
@@ -56,11 +64,19 @@ public class TypeHierarchyResolver {
     @NotNull
     private DescriptorResolver descriptorResolver;
     @NotNull
+<<<<<<< HEAD
     private ScriptHeaderResolver scriptHeaderResolver;
     @NotNull
     private NamespaceFactoryImpl namespaceFactory;
     @NotNull
     private BindingTrace trace;
+=======
+    private ModuleConfiguration configuration;
+
+
+    // state
+    private LinkedList<MutableClassDescriptor> topologicalOrder;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 
     @Inject
     public void setContext(@NotNull TopDownAnalysisContext context) {

@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright 2010-2012 JetBrains s.r.o.
+=======
+ * Copyright 2000-2012 JetBrains s.r.o.
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +20,7 @@
 
 package org.jetbrains.jet.di;
 
+<<<<<<< HEAD
 import com.google.common.collect.Lists;
 import org.jetbrains.annotations.NotNull;
 
@@ -51,6 +56,16 @@ public class GivenExpression implements Expression {
     public GivenExpression(@NotNull String expression, @NotNull Collection<DiType> typesToImport) {
         this.expression = expression;
         this.typesToImport = typesToImport;
+=======
+/**
+* @author abreslav
+*/
+class GivenExpression implements Expression {
+    private final String expression;
+
+    GivenExpression(String expression) {
+        this.expression = expression;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     }
 
     public String getExpression() {
@@ -59,6 +74,7 @@ public class GivenExpression implements Expression {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "given<" + expression + ">";
     }
 
@@ -77,4 +93,8 @@ public class GivenExpression implements Expression {
     public Collection<DiType> getTypesToImport() {
         return typesToImport;
     }
+=======
+        return expression;
+    }
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 }

@@ -28,10 +28,13 @@
     <orderEntry type="library" scope="PROVIDED" name="junit-plugin" level="project" />
     <orderEntry type="module" module-name="j2k" />
     <orderEntry type="module" module-name="js.translator" />
+<<<<<<< HEAD
     <orderEntry type="module" module-name="cli" scope="TEST" />
     <orderEntry type="module" module-name="ide-compiler-runner" />
     <orderEntry type="module" module-name="cli-common" />
     <orderEntry type="module" module-name="jps-plugin" scope="TEST" />
+=======
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
   </component>
 </module>
 

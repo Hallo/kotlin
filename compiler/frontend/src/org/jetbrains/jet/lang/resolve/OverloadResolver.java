@@ -16,10 +16,14 @@
 
 package org.jetbrains.jet.lang.resolve;
 
+<<<<<<< HEAD
 import com.google.common.collect.Sets;
+=======
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import com.intellij.openapi.util.Pair;
 import com.intellij.util.containers.MultiMap;
 import org.jetbrains.annotations.NotNull;
+import javax.inject.Inject;
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.diagnostics.Errors;
 import org.jetbrains.jet.lang.psi.JetClass;

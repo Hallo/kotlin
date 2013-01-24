@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright 2010-2012 JetBrains s.r.o.
+=======
+ * Copyright 2000-2012 JetBrains s.r.o.
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+<<<<<<< HEAD
 class Field {
 
     public static Field create(boolean isPublic, DiType type, String name, @Nullable Expression init) {
@@ -38,10 +43,29 @@ class Field {
     private final boolean isPublic;
 
     @NotNull
+=======
+/**
+* @author abreslav
+*/
+class Field {
+
+    public static Field create(boolean isPublic, Class<?> type, String name, @Nullable Expression init) {
+        Field field = new Field(isPublic, type, name);
+        field.initialization = init;
+        return field;
+    }
+
+    private final Class<?> type;
+    private final String name;
+    private final boolean isPublic;
+
+    @Nullable
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     private Expression initialization;
 
     private final List<SetterDependency> dependencies = Lists.newArrayList();
 
+<<<<<<< HEAD
     Field(boolean isPublic, DiType type, String name) {
         this.isPublic = isPublic;
         this.type = type;
@@ -50,6 +74,15 @@ class Field {
     }
 
     public DiType getType() {
+=======
+    Field(boolean isPublic, Class<?> type, String name) {
+        this.isPublic = isPublic;
+        this.type = type;
+        this.name = name;
+    }
+
+    public Class<?> getType() {
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
         return type;
     }
 
@@ -58,12 +91,20 @@ class Field {
     }
 
     public String getTypeName() {
+<<<<<<< HEAD
         return type.getClazz().getSimpleName();
+=======
+        return type.getSimpleName();
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     }
 
     public String getGetterName() {
         String prefix;
+<<<<<<< HEAD
         if (getType().getClazz() == boolean.class || getType().getClazz() == Boolean.class) {
+=======
+        if (getType() == boolean.class || getType() == Boolean.class) {
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
             prefix = "is";
         }
         else {
@@ -72,7 +113,11 @@ class Field {
         return prefix + StringUtil.capitalize(getName());
     }
 
+<<<<<<< HEAD
     @NotNull
+=======
+    @Nullable
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
     public Expression getInitialization() {
         return initialization;
     }

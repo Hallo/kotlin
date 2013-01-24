@@ -16,12 +16,18 @@
 
 package org.jetbrains.jet.types;
 
+<<<<<<< HEAD
 import org.jetbrains.jet.ConfigurationKind;
 import org.jetbrains.jet.JetLiteFixture;
 import org.jetbrains.jet.JetTestUtils;
 import org.jetbrains.jet.analyzer.AnalyzeExhaust;
 import org.jetbrains.jet.cli.jvm.compiler.JetCoreEnvironment;
 import org.jetbrains.jet.di.InjectorForTests;
+=======
+import org.jetbrains.jet.JetLiteFixture;
+import org.jetbrains.jet.JetTestUtils;
+import org.jetbrains.jet.di.Injector;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.*;
 import org.jetbrains.jet.lang.resolve.AnalyzerScriptParameter;
@@ -64,6 +70,7 @@ public class JetDefaultModalityModifiersTest extends JetLiteFixture {
         private JetScope scope;
 
         public void setUp() throws Exception {
+<<<<<<< HEAD
             InjectorForTests injector = new InjectorForTests(getProject());
             KotlinBuiltIns builtIns = injector.getKotlinBuiltIns();
             descriptorResolver = injector.getDescriptorResolver();
@@ -73,6 +80,12 @@ public class JetDefaultModalityModifiersTest extends JetLiteFixture {
         public void tearDown() throws Exception {
             scope = null;
             descriptorResolver = null;
+=======
+            Injector injector = new Injector(getProject(), null, null, null, false);
+            JetStandardLibrary library = injector.getJetStandardLibrary();
+            descriptorResolver = injector.getDescriptorResolver();
+            scope = createScope(library.getLibraryScope());
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
         }
 
         private JetScope createScope(JetScope libraryScope) {

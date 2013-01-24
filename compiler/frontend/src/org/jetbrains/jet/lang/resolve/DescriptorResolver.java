@@ -23,6 +23,10 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.util.PsiTreeUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+<<<<<<< HEAD
+=======
+import javax.inject.Inject;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.descriptors.annotations.AnnotationDescriptor;
 import org.jetbrains.jet.lang.psi.*;
@@ -33,7 +37,11 @@ import org.jetbrains.jet.lang.resolve.scopes.WritableScope;
 import org.jetbrains.jet.lang.resolve.scopes.WritableScopeImpl;
 import org.jetbrains.jet.lang.resolve.scopes.receivers.ClassReceiver;
 import org.jetbrains.jet.lang.resolve.scopes.receivers.ExtensionReceiver;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.resolve.scopes.receivers.ReceiverValue;
+=======
+import org.jetbrains.jet.lang.resolve.scopes.receivers.ReceiverDescriptor;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.types.*;
 import org.jetbrains.jet.lang.types.checker.JetTypeChecker;
 import org.jetbrains.jet.lang.types.expressions.ExpressionTypingServices;
@@ -42,6 +50,7 @@ import org.jetbrains.jet.lexer.JetTokens;
 import org.jetbrains.jet.util.lazy.LazyValue;
 import org.jetbrains.jet.util.lazy.LazyValueWithDefault;
 
+<<<<<<< HEAD
 import javax.inject.Inject;
 import java.util.*;
 
@@ -53,6 +62,15 @@ import static org.jetbrains.jet.lang.resolve.DescriptorUtils.getExpectedThisObje
 import static org.jetbrains.jet.lang.resolve.ModifiersChecker.*;
 import static org.jetbrains.jet.lexer.JetTokens.OVERRIDE_KEYWORD;
 
+=======
+import java.util.*;
+
+import static org.jetbrains.jet.lang.diagnostics.Errors.*;
+
+/**
+ * @author abreslav
+ */
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 public class DescriptorResolver {
     public static final Name VALUE_OF_METHOD_NAME = Name.identifier("valueOf");
     public static final Name VALUES_METHOD_NAME = Name.identifier("values");

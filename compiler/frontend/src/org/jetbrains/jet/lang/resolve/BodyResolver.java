@@ -21,10 +21,17 @@ import com.google.common.collect.Sets;
 import com.intellij.psi.PsiElement;
 import com.intellij.util.containers.Queue;
 import org.jetbrains.annotations.NotNull;
+<<<<<<< HEAD
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.jet.lang.descriptors.*;
 import org.jetbrains.jet.lang.psi.*;
 import org.jetbrains.jet.lang.resolve.calls.util.CallMaker;
+=======
+import javax.inject.Inject;
+import org.jetbrains.jet.lang.descriptors.*;
+import org.jetbrains.jet.lang.psi.*;
+import org.jetbrains.jet.lang.resolve.calls.CallMaker;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.resolve.calls.CallResolver;
 import org.jetbrains.jet.lang.resolve.calls.results.OverloadResolutionResults;
 import org.jetbrains.jet.lang.resolve.calls.autocasts.DataFlowInfo;
@@ -32,7 +39,11 @@ import org.jetbrains.jet.lang.resolve.scopes.JetScope;
 import org.jetbrains.jet.lang.resolve.scopes.RedeclarationHandler;
 import org.jetbrains.jet.lang.resolve.scopes.WritableScope;
 import org.jetbrains.jet.lang.resolve.scopes.WritableScopeImpl;
+<<<<<<< HEAD
 import org.jetbrains.jet.lang.resolve.scopes.receivers.ReceiverValue;
+=======
+import org.jetbrains.jet.lang.resolve.scopes.receivers.ReceiverDescriptor;
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import org.jetbrains.jet.lang.types.*;
 import org.jetbrains.jet.lang.types.checker.JetTypeChecker;
 import org.jetbrains.jet.lang.types.expressions.ExpressionTypingServices;
@@ -41,10 +52,15 @@ import org.jetbrains.jet.util.Box;
 import org.jetbrains.jet.util.lazy.ReenteringLazyValueComputationException;
 import org.jetbrains.jet.util.slicedmap.WritableSlice;
 
+<<<<<<< HEAD
 import javax.inject.Inject;
 import java.util.*;
 
 import static org.jetbrains.jet.lang.descriptors.ReceiverParameterDescriptor.NO_RECEIVER_PARAMETER;
+=======
+import java.util.*;
+
+>>>>>>> de95e15595ab82be4f17ca9c149aa8bc22a2174e
 import static org.jetbrains.jet.lang.diagnostics.Errors.*;
 import static org.jetbrains.jet.lang.resolve.BindingContext.DEFERRED_TYPE;
 import static org.jetbrains.jet.lang.types.TypeUtils.NO_EXPECTED_TYPE;
